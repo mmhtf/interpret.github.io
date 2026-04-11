@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Editorial Scholar | Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#dae2ff",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e1e3e4",
+                      "primary-container": "#0056d2",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb3ac",
+                      "secondary-fixed-dim": "#b8c8de",
+                      "on-tertiary-container": "#ffcdc8",
+                      "tertiary-container": "#ba1b20",
+                      "on-surface-variant": "#424654",
+                      "on-primary-fixed-variant": "#0040a1",
+                      "on-background": "#191c1d",
+                      "on-secondary-container": "#576679",
+                      "on-primary-container": "#ccd8ff",
+                      "secondary": "#516073",
+                      "on-secondary-fixed": "#0d1d2d",
+                      "inverse-primary": "#b2c5ff",
+                      "surface-container-low": "#f3f4f5",
+                      "surface-container": "#edeeef",
+                      "on-primary-fixed": "#001847",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#d9dadb",
+                      "on-primary": "#ffffff",
+                      "primary": "#0040a1",
+                      "surface": "#f8f9fa",
+                      "surface-bright": "#f8f9fa",
+                      "surface-variant": "#e1e3e4",
+                      "surface-tint": "#0056d2",
+                      "surface-container-high": "#e7e8e9",
+                      "on-secondary-fixed-variant": "#39485a",
+                      "tertiary": "#940010",
+                      "on-tertiary-fixed-variant": "#930010",
+                      "error": "#ba1a1a",
+                      "secondary-fixed": "#d4e4fb",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#737785",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#410003",
+                      "tertiary-fixed": "#ffdad6",
+                      "secondary-container": "#d4e4fb",
+                      "background": "#f8f9fa",
+                      "inverse-surface": "#2e3132",
+                      "on-surface": "#191c1d",
+                      "primary-fixed-dim": "#b2c5ff",
+                      "outline-variant": "#c3c6d6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-[#f8f9fa] dark:bg-slate-950 flex justify-between items-center w-full px-8 py-4 docked full-width top-0 bg-gradient-to-b from-[#f3f4f5] to-transparent z-50 sticky">
+<div class="flex items-center gap-8">
+<span class="text-xl font-extrabold text-[#0040a1] dark:text-blue-400 font-['Manrope'] tracking-tight">The Editorial Scholar</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#0040a1] dark:text-blue-300 border-b-2 border-[#0040a1] pb-1 font-['Manrope'] font-bold tracking-tight Active: opacity-80 transition-all" href="#">Dashboard</a>
+<a class="text-[#516073] dark:text-slate-400 font-medium hover:text-[#0040a1] transition-colors duration-200 font-['Manrope'] font-bold tracking-tight Active: opacity-80 transition-all" href="#">Transcriptions</a>
+<a class="text-[#516073] dark:text-slate-400 font-medium hover:text-[#0040a1] transition-colors duration-200 font-['Manrope'] font-bold tracking-tight Active: opacity-80 transition-all" href="#">Library</a>
+<a class="text-[#516073] dark:text-slate-400 font-medium hover:text-[#0040a1] transition-colors duration-200 font-['Manrope'] font-bold tracking-tight Active: opacity-80 transition-all" href="#">Glossary</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold text-sm shadow-sm transition-transform hover:scale-[1.02]">New Project</button>
+<div class="flex gap-2 text-secondary">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
+</div>
+<div class="flex items-center bg-surface-container-high rounded-full p-1 mr-2">
+<button class="px-3 py-1 rounded-full text-[10px] font-bold transition-all bg-primary text-on-primary shadow-sm">
+        EN
+    </button>
+<button class="px-3 py-1 rounded-full text-[10px] font-bold transition-all text-secondary hover:text-on-surface">
+        ZH
+    </button>
+</div><img alt="User profile" class="w-10 h-10 rounded-full border-2 border-primary-fixed object-cover" data-alt="Professional portrait of a male user in a soft-lit studio environment, blurred background, neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiQ2c7GELKHXTBrySNAmdNZHitoeGxn3Cj73Jz98opivAT7hqVYTxP1wvrc7SzzVCIsJmjNS2ZhMbSBRNSpvBLbcCBCekxKPOqhU2cjTxN3740QQnZoYd2M2pX5oKTz0VKfHW48O0jD3iNiv91qqPqe8KKOycayXe4yo2pM3JLlFwQPrAOwpSqZcWIsa71rpOTjw2E8urSrj--j7iYfEvF0ELpvpLKsvTAy3Ic4agWp7FTGOGubLr5fcKJfjmDVS_IfSqRHhxkBoE"/>
+</div>
+</header>
+<main class="flex min-h-[calc(100vh-76px)]">
+<!-- SideNavBar -->
+<aside class="bg-[#f3f4f5] dark:bg-slate-900 flex flex-col h-[calc(100vh-76px)] w-64 p-6 border-r border-slate-200/20 font-['Inter'] text-sm tracking-wide shadow-[20px_0_40px_rgba(25,28,29,0.03)] sticky top-[76px]">
+<div class="mb-8">
+<div class="text-lg font-black text-[#0040a1] dark:text-blue-400 mb-1">Cognitive Workspace</div>
+<div class="text-xs font-semibold text-secondary uppercase tracking-widest opacity-70">Bilingual Synthesis</div>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<a class="bg-white dark:bg-slate-800 text-[#0040a1] font-semibold rounded-lg shadow-sm flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">edit_note</span> Workspace
+                </a>
+<a class="text-[#516073] dark:text-slate-400 hover:bg-white/50 flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">mic</span> Recordings
+                </a>
+<a class="text-[#516073] dark:text-slate-400 hover:bg-white/50 flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">folder_open</span> Files
+                </a>
+<a class="text-[#516073] dark:text-slate-400 hover:bg-white/50 flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+                </a>
+<a class="text-[#516073] dark:text-slate-400 hover:bg-white/50 flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">help_outline</span> Help
+                </a>
+</nav>
+<button class="mt-auto bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 Active: scale-95 duration-150">
+<span class="material-symbols-outlined">add_circle</span> Start Transcription
+            </button>
+</aside>
+<!-- Main Workspace Canvas -->
+<div class="flex-grow p-8 lg:p-12 overflow-y-auto">
+<div class="grid grid-cols-12 gap-8 max-w-7xl mx-auto">
+<!-- Module 1: Media Center -->
+<section class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col h-fit">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold tracking-tight text-on-background">Media Center</h2>
+<span class="material-symbols-outlined text-secondary opacity-50">cloud_upload</span>
+</div>
+<!-- Upload State (Hidden if file exists) -->
+<div class="hidden border-2 border-dashed border-outline-variant/30 rounded-xl p-8 flex flex-col items-center justify-center text-center gap-4 bg-surface-container-low transition-colors hover:bg-primary-fixed/20 cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary opacity-60">video_library</span>
+<div>
+<p class="font-semibold text-on-surface">Upload Source File</p>
+<p class="text-xs text-secondary mt-1">Audio or Video (MP4, MP3, WAV)</p>
+</div>
+</div>
+<!-- Active Player State -->
+<div class="space-y-6">
+<div class="aspect-video bg-inverse-surface rounded-xl flex items-center justify-center relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40" data-alt="Close-up of a high-end studio microphone with a blurry background of soundproofing foam and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDKNZA0up2gSGscgvGvZYeUzzu2WWw1kxnsQkzezrRROS-OwNyBb5mX68WOnWBCoG6THcFPjC7pXGC8yjMwZxizXiV-cbxSH7FKSwdE003k0164IjHBV9Ywht4FJIz_eYVi2AhSkhrGo_Z89VfJkA4laAe_sP5yN4KeaMITGnHTAvlMuYo6lQjsOFElsTSLX8Z5jBd6MugbeY3LZXUN_hp2C2p7q88D5Xo6Hw-fyWmtMgokyJuVtH8KMglzk2PrmWAGHKjmH6A2aA"/>
+<button class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-xl z-10 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-medium text-secondary">
+<span>03:24</span>
+<span>12:45</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/3"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">skip_previous</span>
+</button>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">skip_next</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 text-xs font-bold text-error hover:bg-error/5 px-3 py-1.5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span> Remove File
+                                </button>
+</div>
+</div>
+</div>
+<!-- Module 2: Practice Recorder -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col h-fit">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold tracking-tight text-on-background">Practice Recorder</h2>
+<div class="group relative">
+<span class="material-symbols-outlined text-secondary opacity-50 cursor-help">info</span>
+<div class="absolute right-0 bottom-full mb-2 w-48 p-2 bg-inverse-surface text-inverse-on-surface text-[10px] rounded leading-tight opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
+                                    Recordings are saved to the "Recent Exercises" folder by default unless a custom path is set in Settings.
+                                </div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-6 py-4">
+<!-- Timer -->
+<div class="text-4xl font-headline font-extrabold tracking-tight text-on-surface/90">
+                                00:00:00
+                            </div>
+<div class="flex items-center gap-6">
+<!-- Record Button -->
+<button class="w-14 h-14 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shadow-lg shadow-tertiary-container/30 hover:scale-105 active:scale-95 transition-all">
+<span class="w-4 h-4 rounded-sm bg-white"></span>
+</button>
+<div class="flex flex-col gap-2">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full text-xs font-bold hover:brightness-95 transition-all">
+                                        Save Recording
+                                    </button>
+<p class="text-[10px] text-center text-secondary font-medium">Default: /Exercises/2023-Oct</p>
+</div>
+</div>
+<!-- Waveform Placeholder -->
+<div class="w-full h-12 flex items-center justify-between gap-1 px-4 opacity-30">
+<div class="w-1 h-4 bg-primary rounded-full"></div>
+<div class="w-1 h-8 bg-primary rounded-full"></div>
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+<div class="w-1 h-10 bg-primary rounded-full"></div>
+<div class="w-1 h-7 bg-primary rounded-full"></div>
+<div class="w-1 h-9 bg-primary rounded-full"></div>
+<div class="w-1 h-5 bg-primary rounded-full"></div>
+<div class="w-1 h-11 bg-primary rounded-full"></div>
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+<div class="w-1 h-4 bg-primary rounded-full"></div>
+<div class="w-1 h-8 bg-primary rounded-full"></div>
+<div class="w-1 h-12 bg-primary rounded-full"></div>
+<div class="w-1 h-5 bg-primary rounded-full"></div>
+<div class="w-1 h-7 bg-primary rounded-full"></div>
+<div class="w-1 h-4 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Module 3: Transcription & Notes -->
+<section class="col-span-12 lg:col-span-8">
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col h-full min-h-[600px]">
+<!-- Tabs Header -->
+<div class="flex border-b border-surface-container-high px-6">
+<button class="py-5 px-6 text-sm font-bold border-b-2 border-primary text-primary transition-all">
+                                Source Transcription
+                            </button>
+<button class="py-5 px-6 text-sm font-medium text-secondary hover:text-on-surface transition-all">
+                                Manual Entry
+                            </button>
+<div class="ml-auto flex items-center gap-2">
+<button class="flex items-center gap-1.5 text-xs font-bold text-secondary hover:text-error transition-colors px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-sm">backspace</span> Clear Text
+                                </button>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-8 flex flex-col flex-grow">
+<!-- Bilingual Metadata Section -->
+<div class="mb-8 flex gap-4">
+<div class="flex-1 p-4 bg-surface-container-low rounded-xl">
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-1">Source Language (English)</p>
+<p class="text-sm font-medium">U.N. General Assembly - Economic Policy Segment</p>
+</div>
+<div class="flex-1 p-4 bg-secondary-container/30 rounded-xl border border-secondary-container/20">
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-1">Target Language (Mandarin)</p>
+<p class="text-sm font-medium">联合国大会 - 经济政策议程</p>
+</div>
+</div>
+<!-- Interactive Text Flow -->
+<div class="flex-grow space-y-6 overflow-y-auto max-h-[500px] pr-4">
+<div class="flex gap-6 group">
+<span class="text-[10px] font-bold text-outline-variant mt-1.5 shrink-0">00:12</span>
+<div class="flex-grow">
+<p class="text-lg leading-relaxed text-on-surface font-body">
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">The</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">global</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">economic</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">recovery</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">remains</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">fragile</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">due</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">to</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">lingering</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">inflationary</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">pressures</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">and</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">supply</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">chain</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">disruptions.</span>
+</p>
+<p class="text-sm text-secondary mt-2 italic font-body opacity-80">
+                                            由于持续的通胀压力和供应链中断，全球经济复苏依然脆弱。
+                                        </p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<span class="text-[10px] font-bold text-outline-variant mt-1.5 shrink-0">00:45</span>
+<div class="flex-grow">
+<p class="text-lg leading-relaxed text-on-surface font-body">
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">We</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">must</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">address</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">the</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">disparity</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">between</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">developed</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">and</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">developing</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">nations</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">in</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">digital</span>
+<span class="hover:bg-secondary-container px-1 rounded-md transition-colors cursor-pointer">infrastructure.</span>
+</p>
+<p class="text-sm text-secondary mt-2 italic font-body opacity-80">
+                                            我们必须解决发达国家与发展中国家在数字基础设施方面的差距。
+                                        </p>
+</div>
+</div>
+<!-- Placeholder for ongoing transcription -->
+<div class="flex gap-6 animate-pulse">
+<span class="text-[10px] font-bold text-outline-variant mt-1.5 shrink-0">01:10</span>
+<div class="flex-grow space-y-2">
+<div class="h-4 bg-surface-container-high rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-high rounded w-1/2"></div>
+</div>
+</div>
+</div>
+<!-- Footer Status -->
+<div class="mt-auto pt-6 flex justify-between items-center text-[10px] font-bold text-secondary uppercase tracking-widest border-t border-surface-container-high">
+<span>Confidence: 94%</span>
+<span>Word Count: 1,284 / 10,000</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span>Syncing to Cloud</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on detail pages as per mandate, but shown here for workspace action) -->
+<button class="fixed bottom-8 right-8 bg-gradient-to-br from-primary to-primary-container text-on-primary w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-2xl">save</span>
+</button>
+</body></html>
